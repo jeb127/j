@@ -1,0 +1,170 @@
+/* -----------폰트 등록----------- */
+@font-face {
+  font-family: "온글잎 박다현체";
+  src: url("../fonts/온글잎 박다현체.ttf");
+}
+
+/* -----------기본 세팅----------- */
+:root{
+  --bg: #edf4ff;
+  --main_blue: #cae4fe;
+  --sub_blue: #499bff;
+  --card: #ffffff;
+  --text: #3b2a35;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "온글잎 박다현체", sans-serif;
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+  padding-bottom: 30%;
+}
+
+/* 페이지 가운데 정렬 */
+body > *{
+  width: min(920px, 92vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -----------헤더----------- */
+.site-header{
+  width: 100vw;                     
+  margin-top: 0px;
+  margin-left: calc(50% - 50vw);      
+  margin-right: calc(50% - 50vw);
+  background: var(--main_blue);
+  padding: 18px 18px;
+}
+
+/* 제목은 왼쪽, 메뉴는 오른쪽 */
+#logo{
+  display: flex;                    
+  align-items: center;             
+  justify-content: space-between;                   
+}
+
+#logo h1{
+  margin: 0;              
+  font-size: 50px;
+}
+
+#logo nav{
+  display: flex;      /* 메뉴를 가로로 */
+  gap: 10px;          /* 버튼 사이 간격 */
+}
+
+/* 네비 버튼 */
+#logo nav a{
+  text-decoration: none;            /* 밑줄 제거 */
+  font-size: 20px;
+  color: var(--text);
+  background: var(--main_blue);
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+/* -----------사진 추가 영역----------- */
+#photo_input, #add_photo{
+  font-family: inherit;
+  font-size: 20px;
+}
+
+#photo_input{
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+#add_photo{
+  width:100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 16px;
+  border: none;
+  background: var(--sub_blue);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* -----------갤러리 영역----------- */
+#gallery{
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 20px;
+  background: var(--card);
+  border: 2px solid var(--sub_blue);
+  border-radius: 16px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+/* 갤러리 안의 이미지 */
+#gallery img{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover 시 살짝 확대 */
+#gallery img:hover{
+  transform: scale(1.04);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+#select{
+  font-family: inherit;
+  font-size: 20px;
+  width:150px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 16px;
+  border: none;
+  background: var(--sub_blue);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.selected {
+  outline: 4px solid var(--sub_blue);
+}
+
+/* -----------모달 기본----------- */
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* -----------모바일 대응----------- */
+@media (max-width: 520px){
+  #gallery{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

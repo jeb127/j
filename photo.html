@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/photo_style.css">
+    <title>공유 갤러리</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div id="logo">
+        <h1>공유 갤러리</h1>
+        <nav>
+          <a href="main.html">♤ 메인</a>
+        </nav>
+    </div>
+    </header>
+
+    <input type="file" id="photo_input" accept="image/*" multiple>
+    <button id="add_photo">추가</button>
+    
+    <div id="gallery"></div>
+
+    <button id="select">선택한 사진 저장</button>
+
+    <!-- 사진 확대 모달 -->
+    <div id="modal" class="hidden">
+      <img id="modal_img">
+    </div>
+
+    <script src="js/photo.js"></script>
+  </body>
+</html>
