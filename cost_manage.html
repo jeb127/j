@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/cost_manage_style.css">
+    <title>여행 비용 관리</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div id="logo">
+        <h1>여행 비용 내역</h1>
+       <nav>
+        <a href="cost_input.html">¢ 추가</a>
+        <a href="index.html">♤ 메인</a>
+      </nav>
+      </div>
+    </header>
+
+    <div>
+      <h3>filtering</h3>
+      <label><input type="radio" name="filter" value="공동">공동</label>
+      <label><input type="radio" name="filter" value="지현">지현</label>
+      <label><input type="radio" name="filter" value="민지">민지</label>
+
+      <h3>전체 내역</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>날짜</th>
+            <th>사용처</th>
+            <th>사용자</th>
+            <th>비용</th>
+          </tr>
+        </thead>
+        <tbody id="cost_table"></tbody>
+      </table>
+
+      <h3>합계</h3>
+      <p><b>전체: <span id="all_total">0</span>원</b></p>
+      <p>지현: <span id="jh_total">0</span>원</p>
+      <p>민지: <span id="mj_total">0</span>원</p>
+    </div>
+
+    <script src="js/cost_manage.js"></script>
+  </body>
+</html>
