@@ -29,7 +29,7 @@ form.addEventListener("submit", function (e) {
   saveCost(costData);
 
   // 관리 페이지로 이동
-  window.location.href = "./cost_manage.html"
+  window.location.href = "/j/cost_manage.html"
 });
 
 function saveCost(data) {
@@ -51,4 +51,5 @@ function saveCost(data) {
 const cancelBtn = document.getElementById("cancel");
 cancelBtn.addEventListener("click", () => {
   window.location.href = "./cost_manage.html";
+
 });
