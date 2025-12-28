@@ -60,6 +60,7 @@ body > *{
 #logo nav{
   display: flex;      /* 메뉴를 가로로 */
   gap: 10px;          /* 버튼 사이 간격 */
+
 }
 
 /* 네비 버튼 */
@@ -161,10 +162,15 @@ fieldset li {
 
   table {
     width: 100%;
+    font-size: 18px;
   }
 
   body > *{
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
    body {
@@ -173,6 +179,11 @@ fieldset li {
 
   h3 {
     font-size: 26px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 10px 14px;
   }
 
   fieldset {
