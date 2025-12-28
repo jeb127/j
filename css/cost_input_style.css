@@ -1,7 +1,7 @@
 /* 폰트 등록 */
 @font-face {
   font-family: "온글잎 박다현체";             
-  src: url("../fonts/온글잎 박다현체.ttf");  
+  src: url("./fonts/온글잎 박다현체.ttf");  
 }
 
 /* -----------기본 세팅----------- */
@@ -113,7 +113,7 @@ input[type="text"], input[type="number"] {
 }
 
 /* -----------버튼 영역----------- */
-input[type="submit"], input[type="reset"] {
+input[type="submit"], input[type="button"] {
   font-family: inherit;
   font-size: 20px;
   padding: 10px 25px;
@@ -150,4 +150,5 @@ input[type="submit"], input[type="reset"] {
     width: 100%;
     margin-bottom: 10px;
   }
+
 }
